@@ -947,6 +947,7 @@ int main(void)
 {
   bl_clock_config();
   bl_timer_init();
+  delayMicroseconds(50000);
   bl_gpio_init();
 
 #ifdef BOOTLOADER_TEST_CLOCK
@@ -961,7 +962,7 @@ int main(void)
 
   checkForSignal();
 
-  gpio_mode_set_input(input_pin, GPIO_PULL_NONE);
+  gpio_mode_set_input(input_pin, GPIO_PULL_UP);
 
 #ifdef USE_ADC_INPUT  // go right to application
   jump();
