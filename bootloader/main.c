@@ -342,7 +342,7 @@ static void setTransmit()
   gpio_mode_set_output(input_pin, GPIO_OUTPUT_PUSH_PULL);
 
   // delay a bit to let the sender get setup for receiving
-  delayMicroseconds(BITTIME);
+ // delayMicroseconds(BITTIME);
 }
 
 static void serialwriteOneChar(uint8_t c)
